@@ -72,7 +72,7 @@ const Dashboard = () => {
             category: j.category,
             logo: j.companyLogo?.startsWith("http")
               ? j.companyLogo
-              : `http://localhost:5000${j.companyLogo || ""}`,
+              : `${API_URL}${j.companyLogo || ""}`,
             applicants: j.applicantsCount || 0,
             status: j.status || "active",
           }));
@@ -146,7 +146,7 @@ const Dashboard = () => {
             category: j.category,
             logo: j.companyLogo?.startsWith("http")
               ? j.companyLogo
-              : `http://localhost:5000${j.companyLogo || ""}`,
+              : `${API_URL}${j.companyLogo || ""}`,
             applicants: j.applicantsCount || 0,
             status: j.status || "active",
           }));

@@ -84,7 +84,7 @@ export default function ListJobs() {
         bJob.companyLogo?.startsWith("http") ||
         bJob.companyLogo?.startsWith("data:")
           ? bJob.companyLogo
-          : `http://localhost:5000${bJob.companyLogo || ""}`,
+          : `${API_URL}${bJob.companyLogo || ""}`,
       role: bJob.roleName,
       company: bJob.companyName,
       techstack: bJob.techStack,
