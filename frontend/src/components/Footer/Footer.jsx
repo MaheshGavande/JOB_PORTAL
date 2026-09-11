@@ -72,25 +72,25 @@ const Footer = () => {
             <h3 className={s.sectionHeader}>Quick Links</h3>
             <ul className={s.linkList}>
               <FooterLink
-                href="/jobs"
+                href="/"
                 icon={<ArrowRight className="w-4 h-4" />}
               >
                 Find Jobs
               </FooterLink>
               <FooterLink
-                href="/companies"
+                href="/"
                 icon={<Building className="w-4 h-4" />}
               >
                 Companies
               </FooterLink>
-              <FooterLink href="/roles" icon={<UserCog className="w-4 h-4" />}>
+              <FooterLink href="/" icon={<UserCog className="w-4 h-4" />}>
                 Roles
               </FooterLink>
-              <FooterLink href="/saved" icon={<Bookmark className="w-4 h-4" />}>
+              <FooterLink href="/" icon={<Bookmark className="w-4 h-4" />}>
                 Saved
               </FooterLink>
               <FooterLink
-                href="/contact"
+                href="/"
                 icon={<UserPen className="w-4 h-4" />}
               >
                 Contact
