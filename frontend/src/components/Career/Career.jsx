@@ -39,16 +39,18 @@ const fallbackCompanies = [
 }));
 
 const Career = () => {
-  const [companies, setCompanies] = useState([]);
+  const [companies, setCompanies] = useState(fallbackCompanies);
 
   // fetch companies from backend
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
         const res = await axios.get(`${API_URL}/api/company`);
-        setCompanies(
-          res.data.companies?.length ? res.data.companies : fallbackCompanies,
-        );
+        const apiCompanies = Array.isArray(res.data.companies)
+          ? res.data.companies
+          : [];
+
+        setCompanies(apiCompanies.length ? apiCompanies : fallbackCompanies);
       } catch (error) {
         console.error("Error fetching companies:", error);
         setCompanies(fallbackCompanies);
